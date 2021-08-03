@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/value_barcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Scanning Result"
+        android:textColor="#9C27B0"
+        android:textAlignment="center"
+        android:textSize="16dp" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/fragment_scan_barcode_preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/value_barcode"/>
+
+    <com.leamra.barcode_scanner.ui.CameraViewOverlay
+        android:id="@+id/overlay"
+        android:layerType="software"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/value_barcode"/>
+
+
+
+</RelativeLayout>
